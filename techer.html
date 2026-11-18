@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--
+  Brand colour #235347 is set once, on the <html> tag, by overriding Bootstrap's own
+  colour variables. After that, every Bootstrap "success" class (bg-success, text-success,
+  border-success, bg-success-subtle...) uses #235347. There is no <style> block and no custom class.
+-->
+<html lang="en" style="--bs-success-rgb: 35, 83, 71; --bs-success-bg-subtle: #cfe3da; --bs-success-border-subtle: #a5c9bb; --bs-body-font-family: Poppins, system-ui, sans-serif;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Portal Dashboard</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-success-subtle">
+  <div class="container-fluid bg-white">
+    <div class="row min-vh-100">
+
+      <!-- ============ SIDEBAR ============ -->
+      <aside class="col-lg-2 col-md-3 p-3">
+        <div class="bg-success text-white rounded-5 p-4 h-100 d-flex flex-column">
+
+          <div class="bg-white bg-opacity-10 rounded-4 d-flex align-items-center justify-content-center mx-auto mb-4 fs-1 shadow" style="width: 6rem; height: 6rem;">
+            <i class="bi bi-person-workspace"></i>
+          </div>
+
+          <nav class="nav flex-column">
+            <a class="nav-link text-white fw-semibold px-0" href="#"><i class="bi bi-grid-1x2-fill me-3"></i>Dashboard</a>
+            <a class="nav-link text-white-50 px-0" href="#"><i class="bi bi-easel2-fill me-3"></i>My Classes</a>
+            <a class="nav-link text-white-50 px-0" href="#"><i class="bi bi-calendar-check-fill me-3"></i>Attendance</a>
+            <a class="nav-link text-white-50 px-0" href="#"><i class="bi bi-journal-check me-3"></i>Gradebook</a>
+            <a class="nav-link text-white-50 px-0" href="#"><i class="bi bi-file-earmark-text-fill me-3"></i>Assignments</a>
+            <a class="nav-link text-white-50 px-0" href="#"><i class="bi bi-chat-square-text-fill me-3"></i>Messages</a>
+            <a class="nav-link text-white-50 px-0" href="#"><i class="bi bi-person-lines-fill me-3"></i>Schedule</a>
+          </nav>
+
+          <a class="nav-link text-white px-0 mt-auto pt-5" href="#"><i class="bi bi-box-arrow-right me-3"></i>Logout</a>
+        </div>
+      </aside>
+
+      <!-- ============ MAIN ============ -->
+      <main class="col-lg-10 col-md-9 p-3">
+
+        <!-- Top bar -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <input type="search" class="form-control rounded-pill border-0 shadow-sm px-4 py-2 w-auto" placeholder="Search students, classes..." aria-label="Search">
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2">
+              <span class="rounded-circle border border-3 border-success bg-warning text-white fw-semibold small d-flex align-items-center justify-content-center" style="width: 2.5rem; height: 2.5rem;">AO</span>
+              <div class="lh-sm">
+                <div class="fw-semibold small">Amina Otieno</div>
+                <div class="text-secondary small">Mathematics Dept.</div>
+              </div>
+            </div>
+            <i class="bi bi-bell-fill"></i>
+          </div>
+        </div>
+
+        <!-- Welcome banner -->
+        <section class="bg-success text-white rounded-4 p-4 px-md-5 mb-4 d-flex justify-content-between align-items-center overflow-hidden">
+          <div>
+            <div class="small text-white-50">Tuesday, 17 November 2026</div>
+            <h2 class="fw-semibold mt-4 mb-1">Good morning, Ms. Otieno!</h2>
+            <p class="small text-white-50 mb-0">You have 4 classes today and 12 submissions waiting to be graded.</p>
+          </div>
+          <div class="display-1 d-none d-md-block">👩‍🏫</div>
+        </section>
+
+        <div class="row g-4">
+
+          <!-- Left column -->
+          <div class="col-xl-9">
+
+            <h3 class="h6 fw-semibold mb-3">Overview</h3>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-4">
+                <div class="card rounded-4 border-0 shadow-sm h-100 text-center">
+                  <div class="card-body py-4">
+                    <i class="bi bi-people-fill fs-1 text-success"></i>
+                    <p class="fw-semibold fs-5 mb-0 mt-2">128</p>
+                    <p class="small text-secondary mb-0">Total Students</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card rounded-4 border border-3 border-success shadow-sm h-100 text-center">
+                  <div class="card-body py-4">
+                    <i class="bi bi-easel2-fill fs-1 text-success"></i>
+                    <p class="fw-semibold fs-5 mb-0 mt-2">4</p>
+                    <p class="small text-secondary mb-0">Classes Today</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="card rounded-4 border-0 shadow-sm h-100 text-center">
+                  <div class="card-body py-4">
+                    <i class="bi bi-pencil-square fs-1 text-success"></i>
+                    <p class="fw-semibold fs-5 mb-0 mt-2">12</p>
+                    <p class="small text-secondary mb-0">To Grade</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 fw-semibold mb-0">My Classes</h3>
+              <a href="#" class="small fw-semibold text-success text-decoration-none">See all</a>
+            </div>
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div class="bg-success-subtle border border-3 border-success rounded-4 p-4 d-flex justify-content-between align-items-end h-100">
+                  <div>
+                    <h6 class="text-success fw-semibold">Algebra II<br>Form 3 East</h6>
+                    <p class="small text-secondary mb-3">34 students · 9:00 AM</p>
+                    <button class="btn bg-success text-white rounded-pill px-4">View</button>
+                  </div>
+                  <i class="bi bi-calculator-fill display-4 text-success"></i>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="bg-success-subtle rounded-4 p-4 d-flex justify-content-between align-items-end h-100">
+                  <div>
+                    <h6 class="text-success fw-semibold">Geometry<br>Form 2 West</h6>
+                    <p class="small text-secondary mb-3">31 students · 11:30 AM</p>
+                    <button class="btn bg-success text-white rounded-pill px-4">View</button>
+                  </div>
+                  <i class="bi bi-triangle-fill display-4 text-success"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 fw-semibold mb-0">Recent Submissions</h3>
+              <a href="#" class="small fw-semibold text-success text-decoration-none">See all</a>
+            </div>
+            <div class="card rounded-4 border-0 shadow-sm">
+              <div class="table-responsive">
+                <table class="table table-borderless align-middle mb-0">
+                  <thead>
+                    <tr class="text-secondary small">
+                      <th class="ps-4">Student</th>
+                      <th>Assignment</th>
+                      <th>Submitted</th>
+                      <th class="pe-4">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody class="small">
+                    <tr>
+                      <td class="ps-4 fw-semibold">Brian Kamau</td>
+                      <td>Quadratic equations</td>
+                      <td>Today, 7:42 AM</td>
+                      <td class="pe-4"><span class="badge rounded-pill bg-warning text-dark">Needs grading</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ps-4 fw-semibold">Grace Wanjiru</td>
+                      <td>Triangle proofs</td>
+                      <td>Yesterday</td>
+                      <td class="pe-4"><span class="badge rounded-pill bg-success">Graded</span></td>
+                    </tr>
+                    <tr>
+                      <td class="ps-4 fw-semibold">Peter Njoroge</td>
+                      <td>Quadratic equations</td>
+                      <td>Yesterday</td>
+                      <td class="pe-4"><span class="badge rounded-pill bg-warning text-dark">Needs grading</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column -->
+          <div class="col-xl-3">
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 fw-semibold mb-0">Today's Schedule</h3>
+              <a href="#" class="small fw-semibold text-success text-decoration-none">See all</a>
+            </div>
+            <div class="card rounded-4 border-0 shadow-sm mb-4">
+              <ul class="list-group list-group-flush rounded-4">
+                <li class="list-group-item py-3 px-4">
+                  <div class="small fw-semibold">9:00 AM · Algebra II</div>
+                  <div class="small text-secondary">Room 12</div>
+                </li>
+                <li class="list-group-item py-3 px-4">
+                  <div class="small fw-semibold">11:30 AM · Geometry</div>
+                  <div class="small text-secondary">Room 8</div>
+                </li>
+                <li class="list-group-item py-3 px-4">
+                  <div class="small fw-semibold">2:00 PM · Staff meeting</div>
+                  <div class="small text-secondary">Staff room</div>
+                </li>
+              </ul>
+            </div>
+
+            <h3 class="h6 fw-semibold mb-3">Class Attendance</h3>
+            <div class="card rounded-4 border-0 shadow-sm mb-4">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between small mb-1"><span>Algebra II</span><span class="fw-semibold">92%</span></div>
+                <div class="progress mb-3" role="progressbar" aria-label="Algebra II attendance">
+                  <div class="progress-bar bg-success w-100"></div>
+                </div>
+                <div class="d-flex justify-content-between small mb-1"><span>Geometry</span><span class="fw-semibold">75%</span></div>
+                <div class="progress" role="progressbar" aria-label="Geometry attendance">
+                  <div class="progress-bar bg-success w-75"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h3 class="h6 fw-semibold mb-0">Announcements</h3>
+              <a href="#" class="small fw-semibold text-success text-decoration-none">See all</a>
+            </div>
+            <div class="card rounded-4 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <h6 class="small fw-semibold mb-1">End-of-term marks due</h6>
+                <p class="small text-secondary mb-1">Please submit all final marks to the exams office by Friday.</p>
+                <a href="#" class="small fw-semibold text-success text-decoration-none">See more</a>
+
+                <h6 class="small fw-semibold mt-3 mb-1">Parents' meeting</h6>
+                <p class="small text-secondary mb-1">Scheduled for next Thursday at 3:00 PM in the main hall.</p>
+                <a href="#" class="small fw-semibold text-success text-decoration-none">See more</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
